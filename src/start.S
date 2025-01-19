@@ -12,7 +12,7 @@ proc_hang:
     wfe                     
     b       proc_hang
 setting:                            
-    //mov     x27, x0
+    mov     x27, x0
     ldr     x1, =SCTLR_VALUE_MMU_DISABLED   // diable MMU
     msr     sctlr_el1, x1                   // sctlr_el1: system control register(EL1)
     bl      from_el2_to_el1
